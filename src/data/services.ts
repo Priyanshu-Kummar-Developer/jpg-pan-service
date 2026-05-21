@@ -8,19 +8,33 @@ const services = [
     },
 
     {
-        title: "Correction Pan Card Apply",
-        charge: "₹250",
+        title: "New Pan Card Apply(Without Birth Certificate)",
+        charge: "₹400",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
     },
 
     {
         title: "Minor Pan Card Apply",
-        charge: "₹200",
+        charge: "₹250",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
     },
 
+    {
+        title: "Minor Pan Card Apply(Without Birth Certificate)",
+        charge: "₹400",
+        category: "PAN Card",
+        logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
+    },
+
+{
+        title: "Correction Pan Card Apply",
+        charge: "₹250",
+        category: "PAN Card",
+        logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
+    },
+    
     {
         title: "Minor to Major Pan Card Apply",
         charge: "₹200",
@@ -29,17 +43,10 @@ const services = [
     },
 
     {
-        title: "Pan Card Correction - Full Name/Father's Name Change",
+        title: "Pan Card Correction (Full Name/Father's Name Change)",
         charge: "₹2000",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
-    },
-
-    {
-        title: "Vehicle RC Download",
-        charge: "₹120/-",
-        category: "RC & DL",
-        logo: "https://cdn-icons-png.flaticon.com/512/2554/2554936.png",
     },
 
     {
@@ -48,6 +55,14 @@ const services = [
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
     },
+    
+    {
+        title: "Vehicle RC Download",
+        charge: "₹120/-",
+        category: "RC & DL",
+        logo: "https://cdn-icons-png.flaticon.com/512/2554/2554936.png",
+    },
+
 
     {
         title: "Voter Card PDF",
@@ -58,7 +73,7 @@ const services = [
 
     {
         title: "Online Aadhar Address Change(Without Documents)",
-        charge: "₹600",
+        charge: "₹375/-",
         category: "Aadhaar",
         logo: "https://cdn-icons-png.flaticon.com/512/3059/3059518.png",
     },
