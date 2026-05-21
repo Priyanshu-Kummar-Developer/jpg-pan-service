@@ -280,7 +280,7 @@ Mera kaam kab tak ho jayega?`;
         {/* FOOTER */}
         <div className="text-center text-slate-500 mt-10 text-sm tracking-wide">
           © 2026 JPG PAN SERVICE • Developed by GPS Info Tech • All
-          Rights Reserved
+          Rights Reserved.
         </div>
       </div>
 
