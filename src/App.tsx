@@ -24,7 +24,7 @@ export default function ServicePortal() {
 
   // INPUT CHANGE
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -33,9 +33,7 @@ export default function ServicePortal() {
   };
 
   // SUBMIT FORM
-  const submitApplication = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
+  const submitApplication = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -53,7 +51,7 @@ export default function ServicePortal() {
 
           customer_details: formData.details,
         },
-        "e0x3oL7FJYj_huyya"
+        "e0x3oL7FJYj_huyya",
       );
 
       // WHATSAPP MESSAGE
@@ -69,9 +67,9 @@ Mera kaam kab tak ho jayega?`;
       // OPEN WHATSAPP
       window.open(
         `https://wa.me/918840201416?text=${encodeURIComponent(
-          whatsappMessage
+          whatsappMessage,
         )}`,
-        "_blank"
+        "_blank",
       );
 
       alert("Application Submitted Successfully ✅");
@@ -84,7 +82,6 @@ Mera kaam kab tak ho jayega?`;
         email: "",
         details: "",
       });
-
     } catch (error) {
       console.log(error);
       alert("Something went wrong ❌");
@@ -98,54 +95,89 @@ Mera kaam kab tak ho jayega?`;
       .includes(search.toLowerCase());
 
     const matchesCategory =
-      activeCategory === "All" ||
-      service.category === activeCategory;
+      activeCategory === "All" || service.category === activeCategory;
 
     return matchesSearch && matchesCategory;
   });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-white to-purple-100 p-4 md:p-8">
-
       <div className="max-w-7xl mx-auto">
+        {/* PREMIUM NAVBAR */}
+        <nav className="w-full bg-gradient-to-r from-sky-100 via-cyan-50 to-blue-100 shadow-2xl border-b border-cyan-200 mb-8">
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between py-4 gap-4">
+              {/* LEFT SIDE */}
+              <div className="flex items-center gap-3">
+                {/* ROUND LOGO */}
+                <div className="h-16 w-16 rounded-full overflow-hidden bg-white shadow-2xl border-4 border-cyan-300 flex-shrink-0">
+                  <img
+                    src="https://i.ibb.co/qFBVHLq8/file.jpg"
+                    alt="JPG PAN SERVICE Logo"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
 
-        {/* HERO SECTION */}
-        <div className="rounded-[40px] bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 p-8 md:p-12 shadow-2xl mb-10 text-center">
+                {/* TITLE */}
+                <div>
+                  <h1 className="text-[22px] md:text-3xl font-black text-slate-800 tracking-wide leading-none">
+                    JPG PAN SERVICE
+                  </h1>
 
-          <div className="inline-block px-6 py-2 rounded-full bg-white/20 text-slate-700 tracking-[4px] uppercase text-sm font-bold mb-6">
-            Digital Service Portal
+                  {/* SERVICE TAGLINE BOX */}
+                  <div className="mt-2 inline-block bg-white/80 backdrop-blur-md border border-cyan-200 px-4 py-2 rounded-full shadow-md">
+                    <p className="text-slate-700 text-[11px] md:text-base font-medium leading-snug text-center">
+                      Fast • Secure • Premium Online Government Services
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT SIDE */}
+              <div className="flex flex-col md:items-end gap-2">
+                {/* NOTICE */}
+                <div className="bg-gradient-to-r from-cyan-200 to-sky-200 text-slate-800 px-4 py-2 rounded-2xl text-xs md:text-sm font-bold shadow-lg max-w-full md:max-w-[500px]">
+                  📢 सभी काम 100% गारंटी के साथ किए जाते हैं। काम के लिए
+                  WhatsApp पर मैसेज करें। +91 8840201416
+                </div>
+
+                {/* CONTACT INFO */}
+                <div className="flex flex-wrap justify-start md:justify-end gap-2 text-slate-700 text-[11px] md:text-sm font-semibold">
+                  <span className="bg-white/80 px-3 py-1 rounded-full backdrop-blur-md border border-cyan-200 shadow-sm whitespace-nowrap">
+                    📞 +91 8840201416
+                  </span>
+
+                  <span className="bg-white/80 px-3 py-1 rounded-full backdrop-blur-md border border-cyan-200 shadow-sm whitespace-nowrap">
+                    📧 jpgpanservice@gmail.com
+                  </span>
+
+                  <span className="bg-white/80 px-3 py-1 rounded-full backdrop-blur-md border border-cyan-200 shadow-sm whitespace-nowrap">
+                    ⏰ 09:30 PM - 11:00 AM
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <h1 className="text-4xl md:text-7xl font-black text-slate-800">
-            JPG PAN SERVICE
-          </h1>
-
-          <p className="text-slate-700 text-lg md:text-2xl mt-5 font-medium">
-            Fast • Secure • Premium Online Government Services
-          </p>
-
-        </div>
+        </nav>
 
         {/* SEARCH */}
         <div className="mb-8 flex flex-col md:flex-row gap-4 justify-between items-center">
-
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             type="text"
             placeholder="Search Services..."
-            className="w-full md:w-[400px] px-5 py-4 rounded-2xl bg-white border border-gray-200 text-black outline-none shadow-xl"
+            className="w-full md:w-[400px] px-5 py-4 rounded-2xl bg-white/80 backdrop-blur-md border border-cyan-200 text-slate-800 outline-none shadow-xl"
           />
 
           {/* CATEGORY BUTTONS */}
           <div className="flex gap-3 flex-wrap justify-center">
-
             <button
               onClick={() => setActiveCategory("All")}
-              className={`px-5 py-3 rounded-2xl text-white font-semibold shadow-xl ${
+              className={`px-5 py-3 rounded-2xl font-semibold shadow-xl border transition-all ${
                 activeCategory === "All"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-500"
-                  : "bg-gray-400"
+                  ? "bg-gradient-to-r from-cyan-200 to-sky-200 text-slate-800 border-cyan-300"
+                  : "bg-white/80 text-slate-700 border-cyan-100 hover:bg-cyan-50"
               }`}
             >
               All Services
@@ -153,10 +185,10 @@ Mera kaam kab tak ho jayega?`;
 
             <button
               onClick={() => setActiveCategory("Aadhaar")}
-              className={`px-5 py-3 rounded-2xl text-white font-semibold shadow-xl ${
+              className={`px-5 py-3 rounded-2xl font-semibold shadow-xl border transition-all ${
                 activeCategory === "Aadhaar"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-500"
-                  : "bg-gray-400"
+                  ? "bg-gradient-to-r from-cyan-200 to-sky-200 text-slate-800 border-cyan-300"
+                  : "bg-white/80 text-slate-700 border-cyan-100 hover:bg-cyan-50"
               }`}
             >
               Aadhaar
@@ -164,10 +196,10 @@ Mera kaam kab tak ho jayega?`;
 
             <button
               onClick={() => setActiveCategory("PAN Card")}
-              className={`px-5 py-3 rounded-2xl text-white font-semibold shadow-xl ${
+              className={`px-5 py-3 rounded-2xl font-semibold shadow-xl border transition-all ${
                 activeCategory === "PAN Card"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-500"
-                  : "bg-gray-400"
+                  ? "bg-gradient-to-r from-cyan-200 to-sky-200 text-slate-800 border-cyan-300"
+                  : "bg-white/80 text-slate-700 border-cyan-100 hover:bg-cyan-50"
               }`}
             >
               PAN Card
@@ -175,56 +207,59 @@ Mera kaam kab tak ho jayega?`;
 
             <button
               onClick={() => setActiveCategory("RC & DL")}
-              className={`px-5 py-3 rounded-2xl text-white font-semibold shadow-xl ${
+              className={`px-5 py-3 rounded-2xl font-semibold shadow-xl border transition-all ${
                 activeCategory === "RC & DL"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-500"
-                  : "bg-gray-400"
+                  ? "bg-gradient-to-r from-cyan-200 to-sky-200 text-slate-800 border-cyan-300"
+                  : "bg-white/80 text-slate-700 border-cyan-100 hover:bg-cyan-50"
               }`}
             >
               RC & DL
             </button>
-
           </div>
-
         </div>
-
         {/* SERVICES GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
-
           {filteredServices.map((service, index) => (
-
             <div
               key={index}
-              className="rounded-[30px] bg-white p-6 shadow-xl hover:scale-105 transition-all duration-300"
+              className="relative overflow-hidden rounded-[30px] bg-gradient-to-br from-sky-100 via-cyan-50 to-blue-100 border border-cyan-200 p-6 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
+              {/* TOP BORDER */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-400"></div>
 
-              <div className="w-20 h-20 rounded-3xl overflow-hidden bg-white p-3 shadow-xl mb-5 mx-auto border border-gray-200">
-
+              {/* LOGO */}
+              <div className="w-20 h-20 rounded-3xl overflow-hidden bg-white p-3 shadow-lg mb-5 mx-auto border border-cyan-200">
                 <img
                   src={service.logo}
                   alt="service"
                   className="w-full h-full object-contain"
                 />
-
               </div>
 
-              <h2 className="text-slate-800 text-xl font-bold text-center min-h-[60px]">
+              {/* TITLE */}
+              <h2 className="text-slate-800 text-lg md:text-xl font-bold text-center min-h-[60px] leading-snug">
                 {service.title}
               </h2>
 
-              <div className="mt-4 text-center">
-
-                <span className="inline-block bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold px-5 py-2 rounded-full">
-                  {service.charge}
+              {/* CATEGORY */}
+              <div className="mt-2 text-center">
+                <span className="inline-block bg-white border border-cyan-200 text-cyan-700 text-xs font-bold px-4 py-1 rounded-full shadow-sm">
+                  {service.category}
                 </span>
-
               </div>
 
-              <div className="mt-6 flex gap-3">
+              {/* PRICE */}
+              <div className="mt-5 text-center">
+                <span className="inline-block bg-gradient-to-r from-cyan-500 to-sky-500 text-white font-black px-6 py-2 rounded-full shadow-lg text-lg">
+                  {service.charge}
+                </span>
+              </div>
 
+              {/* BUTTONS */}
+              <div className="mt-6 flex gap-3">
                 <button
                   onClick={() => openApplyForm(service)}
-                  className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white py-3 rounded-2xl font-bold hover:scale-105 transition"
+                  className="flex-1 bg-gradient-to-r from-emerald-500 to-green-600 text-white py-3 rounded-2xl font-bold shadow-lg hover:scale-105 transition-all duration-300"
                 >
                   🚀 Apply
                 </button>
@@ -232,33 +267,26 @@ Mera kaam kab tak ho jayega?`;
                 <a
                   href="https://wa.me/918840201416"
                   target="_blank"
-                  className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 rounded-2xl font-bold text-center hover:scale-105 transition"
+                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-2xl font-bold text-center shadow-lg hover:scale-105 transition-all duration-300"
                 >
                   💬 WhatsApp
                 </a>
-
               </div>
-
             </div>
-
           ))}
-
         </div>
 
         {/* FOOTER */}
         <div className="text-center text-slate-500 mt-10 text-sm tracking-wide">
-          © 2026 JPG PAN SERVICE • Premium Digital Online Portal
+          © 2026 JPG PAN SERVICE • Developed by GPS Info Tech - Mumbai • All
+          Rights Reserved
         </div>
-
       </div>
 
       {/* APPLY MODAL */}
       {showModal && (
-
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
-
           <div className="bg-white rounded-[30px] w-full max-w-md p-6 shadow-2xl relative">
-
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-4 right-4 text-2xl font-bold text-gray-500"
@@ -270,15 +298,9 @@ Mera kaam kab tak ho jayega?`;
               Apply Service
             </h2>
 
-            <p className="text-slate-500 mb-6">
-              {selectedService?.title}
-            </p>
+            <p className="text-slate-500 mb-6">{selectedService?.title}</p>
 
-            <form
-              onSubmit={submitApplication}
-              className="space-y-4"
-            >
-
+            <form onSubmit={submitApplication} className="space-y-4">
               <input
                 type="text"
                 name="name"
@@ -324,15 +346,10 @@ Mera kaam kab tak ho jayega?`;
               >
                 Submit Application
               </button>
-
             </form>
-
           </div>
-
         </div>
-
       )}
-
     </div>
   );
 }
