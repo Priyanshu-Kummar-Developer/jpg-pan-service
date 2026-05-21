@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import services from "./data/services";
+import { FaWhatsapp } from "react-icons/fa6";
 
 export default function ServicePortal() {
   const [search, setSearch] = useState("");
@@ -127,7 +128,7 @@ Mera kaam kab tak ho jayega?`;
                   {/* SERVICE TAGLINE BOX */}
                   <div className="mt-2 inline-block bg-white/80 backdrop-blur-md border border-cyan-200 px-4 py-2 rounded-full shadow-md">
                     <p className="text-slate-700 text-[11px] md:text-base font-medium leading-snug text-center">
-                      Fast • Secure • Premium Online Government Services
+                      Fast • Secure • Online Government Services
                     </p>
                   </div>
                 </div>
@@ -282,6 +283,24 @@ Mera kaam kab tak ho jayega?`;
           Rights Reserved
         </div>
       </div>
+
+      {/* FLOATING WHATSAPP BUTTON */}
+<div className="fixed bottom-5 right-5 z-50">
+
+  {/* PULSE WAVES */}
+  <span className="absolute inline-flex h-10 w-10 rounded-full bg-green-400 opacity-50 animate-ping"></span>
+
+  {/* BUTTON */}
+  <a
+    href="https://wa.me/918840201416?text=Hello%20JPG%20PAN%20SERVICE"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative flex items-center justify-center bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-2xl hover:scale-110 transition-all duration-300"
+  >
+    <FaWhatsapp size={22} />
+  </a>
+
+</div>
 
       {/* APPLY MODAL */}
       {showModal && (
