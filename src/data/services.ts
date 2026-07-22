@@ -2,28 +2,28 @@ const services = [
 
     {
         title: "New Pan Card Apply",
-        charge: "₹250",
+        charge: "₹200/-",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
     },
 
     {
         title: "New Pan Card Apply(Without Birth Certificate)",
-        charge: "₹400",
+        charge: "₹350/-",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
     },
 
     {
         title: "Minor Pan Card Apply",
-        charge: "₹250",
+        charge: "₹200/-",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
     },
 
     {
         title: "Minor Pan Card Apply(Without Birth Certificate)",
-        charge: "₹400",
+        charge: "₹350/-",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
     },
@@ -44,14 +44,14 @@ const services = [
 
     {
         title: "Pan Card Correction (Full Name/Father's Name Change)",
-        charge: "₹2000",
+        charge: "₹1500/-",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
     },
 
     {
-        title: "Find Lost Pan",
-        charge: "₹300",
+        title: "Find Lost Pan Number",
+        charge: "₹140/-",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
     },
@@ -66,28 +66,28 @@ const services = [
 
     {
         title: "Voter Card PDF",
-        charge: "₹400",
+        charge: "₹120/-",
         category: "Voter",
         logo: "https://cdn-icons-png.flaticon.com/512/681/681494.png",
     },
 
     {
         title: "Online Aadhar Address Change(Without Documents)",
-        charge: "₹375/-",
+        charge: "₹350/-",
         category: "Aadhaar",
         logo: "https://cdn-icons-png.flaticon.com/512/3059/3059518.png",
     },
 
     {
         title: "UID To Mobile Owner Details",
-        charge: "₹300",
+        charge: "₹300/-",
         category: "Aadhaar",
         logo: "https://cdn-icons-png.flaticon.com/512/3059/3059518.png",
     },
 
     {
         title: "Mobile Number Owner Details",
-        charge: "₹500",
+        charge: "₹300/-",
         category: "Mobile",
         logo: "https://cdn-icons-png.flaticon.com/512/724/724664.png",
     },
@@ -101,7 +101,7 @@ const services = [
 
     {
         title: "Masked Pan",
-        charge: "₹30/Search",
+        charge: "₹30/- Search",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/942/942748.png",
     },
@@ -241,14 +241,14 @@ const services = [
 
     {
         title: "Voter Card Manual",
-        charge: "₹400",
+        charge: "₹120/-",
         category: "Voter",
         logo: "https://cdn-icons-png.flaticon.com/512/681/681494.png",
     },
 
     {
         title: "Pan Card Manual Print",
-        charge: "₹120",
+        charge: "₹100/-",
         category: "PAN Card",
         logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
     },
@@ -318,7 +318,7 @@ const services = [
 
     {
         title: "Aadhaar Manual Print",
-        charge: "₹450/PDF",
+        charge: "₹120/- PDF",
         category: "Aadhaar",
         logo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
     },
