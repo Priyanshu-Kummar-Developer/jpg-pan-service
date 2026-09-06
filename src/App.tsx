@@ -113,7 +113,7 @@ Mera kaam kab tak ho jayega?`;
                 {/* ROUND LOGO */}
                 <div className="h-16 w-16 rounded-full overflow-hidden bg-white shadow-2xl border-4 border-cyan-300 flex-shrink-0">
                   <img
-                    src="https://i.ibb.co/qFBVHLq8/file.jpg"
+                    src="/file.jpg"
                     alt="JPG PAN SERVICE Logo"
                     className="h-full w-full object-cover"
                   />
