@@ -153,7 +153,7 @@ Mera kaam kab tak ho jayega?`;
                   </span>
 
                   <span className="bg-white/80 px-3 py-1 rounded-full backdrop-blur-md border border-cyan-200 shadow-sm whitespace-nowrap">
-                    ⏰ 09:30 PM - 11:00 AM
+                    ⏰ 24 x 7 Available
                   </span>
                 </div>
               </div>
